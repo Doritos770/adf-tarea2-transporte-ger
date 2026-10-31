@@ -1,0 +1,41 @@
+{
+	"name": "df_demanda_paradas",
+	"properties": {
+		"folder": {
+			"name": "bronze"
+		},
+		"type": "MappingDataFlow",
+		"typeProperties": {
+			"sources": [
+				{
+					"dataset": {
+						"referenceName": "rutas_csv",
+						"type": "DatasetReference"
+					},
+					"name": "source1"
+				}
+			],
+			"sinks": [],
+			"transformations": [
+				{
+					"name": "derivedColumn1"
+				}
+			],
+			"scriptLines": [
+				"source(output(",
+				"          cod_ruta as string,",
+				"          nombre_ruta as string,",
+				"          origen as string,",
+				"          destino as string,",
+				"          fecha_desde as string,",
+				"          fecha_hasta as string,",
+				"          estado as string",
+				"     ),",
+				"     allowSchemaDrift: true,",
+				"     validateSchema: false,",
+				"     ignoreNoFilesFound: false) ~> source1",
+				"source1 derive(destino = ERROR_FUNCTION('')) ~> derivedColumn1"
+			]
+		}
+	}
+}
