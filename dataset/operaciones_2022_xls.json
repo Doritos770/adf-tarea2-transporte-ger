@@ -1,0 +1,23 @@
+{
+	"name": "operaciones_2022_xls",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ls_sa_db_transportes",
+			"type": "LinkedServiceReference"
+		},
+		"folder": {
+			"name": "bronze/xls"
+		},
+		"annotations": [],
+		"type": "Excel",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileName": "operacion_2022.xlsx",
+				"folderPath": "xls",
+				"fileSystem": "raw"
+			}
+		},
+		"schema": []
+	}
+}
