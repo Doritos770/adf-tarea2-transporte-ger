@@ -2,7 +2,7 @@
 	"name": "bronze_Demanda_Paradas_sql",
 	"properties": {
 		"linkedServiceName": {
-			"referenceName": "ls_sql_dw_bronze_transporte",
+			"referenceName": "erp_sql_transporte_db",
 			"type": "LinkedServiceReference"
 		},
 		"folder": {
@@ -53,7 +53,7 @@
 			}
 		],
 		"typeProperties": {
-			"schema": "bronze",
+			"schema": "dbo",
 			"table": "DemandaParadasAzure"
 		}
 	}

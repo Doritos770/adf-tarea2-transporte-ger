@@ -16,7 +16,9 @@
 				"fileName": "operacion_2022.xlsx",
 				"folderPath": "xls",
 				"fileSystem": "raw"
-			}
+			},
+			"sheetIndex": 3,
+			"firstRowAsHeader": true
 		},
 		"schema": []
 	}
