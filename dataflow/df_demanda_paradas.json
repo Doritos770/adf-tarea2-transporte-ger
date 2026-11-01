@@ -47,9 +47,6 @@
 				},
 				{
 					"name": "union1"
-				},
-				{
-					"name": "union2"
 				}
 			],
 			"scriptLines": [
@@ -129,9 +126,8 @@
 				"     ),",
 				"     skipDuplicateMapInputs: true,",
 				"     skipDuplicateMapOutputs: true) ~> select2",
-				"select1, select2 union(byName: true)~> union1",
-				"union1, source4 union(byName: true)~> union2",
-				"union2 sink(allowSchemaDrift: true,",
+				"select1, select2, source4 union(byName: true)~> union1",
+				"union1 sink(allowSchemaDrift: true,",
 				"     validateSchema: false,",
 				"     input(",
 				"          AnioFuente as string,",
